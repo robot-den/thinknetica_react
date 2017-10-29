@@ -1,3 +1,1 @@
-const TextBox = ({ string }) => {
-  return DOM.span(null, string)
-};
+const TextBox = ({ children }) => DOM.span(null, children);

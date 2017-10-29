@@ -1,9 +1,11 @@
-const BlogItem = ({ image, text }) => {
+const BlogItem = ({ image, description }) => {
   return(
     <div>
-      <Image src={image.src} />
+      <Image {...image} />
       <br/>
-      <TextBox string={text.string} />
+      <TextBox>
+        {description.text}
+      </TextBox>
       <br/>
     </div>
   );
@@ -13,7 +15,7 @@ const BlogItem = ({ image, text }) => {
 //       null,
 //       React.createElement(Image, image),
 //       React.createElement('br'),
-//       React.createElement(TextBox, text),
+//       React.createElement(TextBox, null, description.text),
 //       React.createElement('br')
 //     )
 //   )

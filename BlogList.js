@@ -1,9 +1,9 @@
-const BlogList = ({ blogs }) => {
+const BlogList = ({ posts }) => {
   return(
     DOM.div(
       null,
       _.map(
-        blogs,
+        posts,
         (blog, key) => {
           blog.key = key
           return React.createElement(BlogItem, blog);
