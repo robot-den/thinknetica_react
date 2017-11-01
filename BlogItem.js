@@ -3,42 +3,20 @@ class BlogItem extends React.Component {
     const { image, description, meta } = this.props;
     return(
       <div>
-        <Image {...image} />
-        <br/>
+        <div>
+          <Image {...image} />
+        </div>
         <TextBox>
-          {description.text}
+          {description}
         </TextBox>
-        <br/>
-        <TextBox>
-          {'Author: '}
-        </TextBox>
-        <TextBox className='author_name'>
-          {meta.author_name}
-        </TextBox>
-        <TextBox>
-          {'created at: '}
-        </TextBox>
-        <TextBox style={{color: 'red', marginRight: '5px'}}>
-        {meta.created_at}
-        </TextBox>
-        <TextBox>
-          {'updated at: '}
-        </TextBox>
-        <TextBox>
-          {meta.updated_at}
-        </TextBox>
-        <Like count={meta.count_of_likes}/>
-        <br/>
-        <br/>
+        <PostMetaInfo {...meta}/>
       </div>
     )
   }
 }
 
 BlogItem.defaultProps = {
-  description: {
-    text: 'default blog item description'
-  },
+  description: 'default blog item description',
   image: {
     src: 'https://test.com/default.png',
     alt: 'default blog item Opps',
@@ -53,11 +31,7 @@ BlogItem.defaultProps = {
 }
 
 BlogItem.propTypes = {
-  description: PropTypes.shape(TextBox.propTypes),
+  description: PropTypes.string,
   image: PropTypes.shape(Image.propTypes),
-  meta: PropTypes.shape({
-    author_name: PropTypes.string,
-    created_at: PropTypes.string,
-    updated_at: PropTypes.string
-  })
+  meta: PropTypes.shape(PostMetaInfo.propTypes)
 }

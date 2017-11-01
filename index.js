@@ -3,7 +3,7 @@ const { bind } = _;
 
 const posts = [
   {
-    description: { text: 'text1' },
+    description: 'text1',
     image: {
       src: 'https://test.com/test1.png',
       width: 100,
@@ -16,7 +16,7 @@ const posts = [
     }
   },
   {
-    description: { text: 'text2' },
+    description: 'text2',
     image: {
       src: 'https://test.com/test2.png',
       alt: 'Opps_2!',
@@ -31,7 +31,7 @@ const posts = [
     }
   },
   {
-    description: {},
+    description: 'text3',
     image: {
       src: 'https://test.com/test3.png',
       alt: 'Opps_3!',
