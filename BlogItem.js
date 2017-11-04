@@ -1,22 +1,37 @@
-const BlogItem = ({ image, description }) => {
-  return(
-    <div>
-      <Image {...image} />
-      <br/>
-      <TextBox>
-        {description.text}
-      </TextBox>
-      <br/>
-    </div>
-  );
-// // this is also possible:
-//   return(
-//     DOM.div(
-//       null,
-//       React.createElement(Image, image),
-//       React.createElement('br'),
-//       React.createElement(TextBox, null, description.text),
-//       React.createElement('br')
-//     )
-//   )
+class BlogItem extends React.Component {
+  render() {
+    const { image, description, meta } = this.props;
+    return(
+      <div>
+        <div>
+          <Image {...image} />
+        </div>
+        <TextBox>
+          {description}
+        </TextBox>
+        <PostMetaInfo {...meta}/>
+      </div>
+    )
+  }
+}
+
+BlogItem.defaultProps = {
+  description: 'default blog item description',
+  image: {
+    src: 'https://test.com/default.png',
+    alt: 'default blog item Opps',
+    width: 100,
+    height: 100
+  },
+  meta: {
+    author_name: 'Default blog item author',
+    created_at: '01.01.1970',
+    updated_at: '01.01.1970'
+  }
+}
+
+BlogItem.propTypes = {
+  description: PropTypes.string,
+  image: PropTypes.shape(Image.propTypes),
+  meta: PropTypes.shape(PostMetaInfo.propTypes)
 }
