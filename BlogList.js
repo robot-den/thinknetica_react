@@ -1,12 +1,12 @@
-const BlogList = ({ posts }) => {
+const BlogList = ({ posts, like }) => {
   return(
     DOM.div(
       null,
       _.map(
         posts,
-        (blog, key) => {
-          blog.key = key
-          return React.createElement(BlogItem, blog);
+        (post, _) => {
+          post.meta.like = like;
+          return React.createElement(BlogItem, {...post, key: post.meta.id});
         }
       )
     )

@@ -1,18 +1,13 @@
-class Like extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {...props};
-    this.like = bind(this.like, this)
-  }
-
-  like() {
-    this.setState({count: this.state.count + 1})
-  }
-
-  render() {
-    const { count } = this.state;
-    return DOM.div({}, DOM.button({onClick: this.like}, count));
-  }
+const Like = ({ count_of_likes, like, id }) => {
+  return DOM.div(
+    {},
+    DOM.button(
+      {
+        onClick: () => like(id)
+      },
+      count_of_likes
+    )
+  );
 }
 
 Like.defaultProps = {

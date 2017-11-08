@@ -1,6 +1,6 @@
 class PostMetaInfo extends React.Component {
   render() {
-    const { author_name, created_at, updated_at, count_of_likes } = this.props;
+    const { author_name, created_at, updated_at, count_of_likes, id } = this.props;
     return(
       <div className='post_meta_info'>
         <TextBox>
@@ -21,7 +21,7 @@ class PostMetaInfo extends React.Component {
         <TextBox>
           {updated_at}
         </TextBox>
-        <Like count={count_of_likes}/>
+        <Like {...this.props} />
       </div>
     )
   }
