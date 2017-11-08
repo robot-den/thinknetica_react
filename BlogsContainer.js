@@ -14,6 +14,11 @@ class BlogsContainer extends React.Component {
 
   render() {
     const { posts } = this.state;
-    return React.createElement(BlogList, { posts: posts, like: this.like })
+    return (
+      React.createElement('div', {},
+        React.createElement(BlogList, { posts: posts, like: this.like }),
+        React.createElement(PieChart, { posts: posts})
+      )
+    )
   }
 }
