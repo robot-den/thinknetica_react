@@ -1,19 +1,17 @@
-const Like = ({ count_of_likes, like, id }) => {
+const Like = ({ countOfLikes, like }) => {
   return DOM.div(
     {},
     DOM.button(
-      {
-        onClick: () => like(id)
-      },
-      count_of_likes
+      {onClick: () => like()},
+      countOfLikes
     )
   );
 }
 
 Like.defaultProps = {
-  count: 0
+  countOfLikes: 0
 }
 
 Like.propTypes = {
-  count: PropTypes.number
+  countOfLikes: PropTypes.number
 }

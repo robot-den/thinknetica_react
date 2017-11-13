@@ -24,7 +24,7 @@ class PieChart extends React.Component {
     _.forEach(
       posts,
       (post) => {
-        columns.push([post.description, post.meta.count_of_likes])
+        columns.push([post.description, post.meta.countOfLikes])
       }
     );
     return columns;

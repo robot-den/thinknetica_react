@@ -1,5 +1,5 @@
 const { DOM, PropTypes } = React;
-const { bind } = _;
+const { bind, cloneDeep } = _;
 
 const posts = [
   {
@@ -13,7 +13,7 @@ const posts = [
       author_name: 'Hank',
       created_at: moment().format('DD.MM.YYYY'),
       updated_at: moment().format('DD.MM.YYYY'),
-      count_of_likes: 0,
+      countOfLikes: 0,
       id: 1
     }
   },
@@ -29,7 +29,7 @@ const posts = [
       author_name: 'Hank',
       created_at: moment().format('DD.MM.YYYY'),
       updated_at: moment().format('DD.MM.YYYY'),
-      count_of_likes: 11,
+      countOfLikes: 11,
       id: 2
     }
   },
@@ -45,7 +45,7 @@ const posts = [
       author_name: 'Hank',
       created_at: moment().format('DD.MM.YYYY'),
       updated_at: moment().format('DD.MM.YYYY'),
-      count_of_likes: 12,
+      countOfLikes: 12,
       id: 3
     }
   }

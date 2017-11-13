@@ -1,12 +1,8 @@
 class BlogItem extends React.Component {
-  componentWillReceiveProps(nextProps) {
-    // this.props and nextProps are equal here...
-  }
   shouldComponentUpdate(nextProps, nextState) {
-    // here nextProps already applied to this.props...
-    // return !_.isEqual(nextProps, this.props)
-    return true
+    return !(this.props.meta.countOfLikes === nextProps.meta.countOfLikes);
   }
+
   render() {
     const { image, description, meta } = this.props;
     return(

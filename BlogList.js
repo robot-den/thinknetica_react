@@ -5,7 +5,7 @@ const BlogList = ({ posts, like }) => {
       _.map(
         posts,
         (post, _) => {
-          post.meta.like = like;
+          post.meta.like = () => like(post.meta.id);
           return React.createElement(BlogItem, {...post, key: post.meta.id});
         }
       )
