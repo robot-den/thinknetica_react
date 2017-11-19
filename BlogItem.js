@@ -1,4 +1,8 @@
 class BlogItem extends React.Component {
+  shouldComponentUpdate(nextProps, nextState) {
+    return !(this.props.meta.countOfLikes === nextProps.meta.countOfLikes);
+  }
+
   render() {
     const { image, description, meta } = this.props;
     return(
