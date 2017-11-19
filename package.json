@@ -1,0 +1,33 @@
+{
+  "name": "thinknetica_react",
+  "version": "1.0.0",
+  "description": "Learn React with Thinknetica",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/robot-den/thinknetica_react.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/robot-den/thinknetica_react/issues"
+  },
+  "homepage": "https://github.com/robot-den/thinknetica_react#readme",
+  "devDependencies": {
+    "eslint": "^4.11.0",
+    "eslint-plugin-destructuring": "^2.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-react": "^7.5.0"
+  },
+  "dependencies": {
+    "lodash": "^4.17.4",
+    "moment": "^2.19.2",
+    "prop-types": "^15.6.0",
+    "react": "^16.1.1",
+    "react-dom": "^16.1.1",
+    "react-dom-factories": "^1.0.2"
+  }
+}
