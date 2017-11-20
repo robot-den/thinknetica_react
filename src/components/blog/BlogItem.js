@@ -1,5 +1,11 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+import PostMetaInfo from './post_elements/PostMetaInfo';
+import TextBox from './post_elements/TextBox';
+import Image from './post_elements/Image';
+
 class BlogItem extends React.Component {
-  shouldComponentUpdate(nextProps, nextState) {
+  shouldComponentUpdate(nextProps) {
     return !(this.props.meta.countOfLikes === nextProps.meta.countOfLikes);
   }
 
@@ -15,7 +21,7 @@ class BlogItem extends React.Component {
         </TextBox>
         <PostMetaInfo {...meta}/>
       </div>
-    )
+    );
   }
 }
 
@@ -32,10 +38,12 @@ BlogItem.defaultProps = {
     created_at: '01.01.1970',
     updated_at: '01.01.1970'
   }
-}
+};
 
 BlogItem.propTypes = {
   description: PropTypes.string,
   image: PropTypes.shape(Image.propTypes),
   meta: PropTypes.shape(PostMetaInfo.propTypes)
-}
+};
+
+export default BlogItem;

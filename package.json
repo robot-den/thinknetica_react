@@ -17,10 +17,16 @@
   },
   "homepage": "https://github.com/robot-den/thinknetica_react#readme",
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-latest": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
     "eslint": "^4.11.0",
     "eslint-plugin-destructuring": "^2.1.0",
     "eslint-plugin-import": "^2.8.0",
-    "eslint-plugin-react": "^7.5.0"
+    "eslint-plugin-react": "^7.5.0",
+    "webpack": "^3.8.1"
   },
   "dependencies": {
     "lodash": "^4.17.4",

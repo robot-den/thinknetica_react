@@ -1,3 +1,9 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+import TextBox from './TextBox';
+import Like from './Like';
+
+
 class PostMetaInfo extends React.Component {
   render() {
     const { author_name, created_at, updated_at, countOfLikes, like } = this.props;
@@ -32,11 +38,13 @@ PostMetaInfo.defaultProps = {
   created_at: '01.01.1971',
   updated_at: '01.01.1971',
   countOfLikes: 0
-}
+};
 
 PostMetaInfo.propTypes = {
   author_name: PropTypes.string,
   created_at: PropTypes.string,
   updated_at: PropTypes.string,
   countOfLikes: PropTypes.number
-}
+};
+
+export default PostMetaInfo;

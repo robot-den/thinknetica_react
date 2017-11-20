@@ -1,5 +1,4 @@
-const { DOM, PropTypes } = React;
-const { bind, cloneDeep } = _;
+import moment from 'moment';
 
 const posts = [
   {
@@ -49,9 +48,6 @@ const posts = [
       id: 3
     }
   }
-]
+];
 
-ReactDOM.render(
-  React.createElement(BlogsContainer),
-  document.getElementById('app')
-)
+export default posts;
