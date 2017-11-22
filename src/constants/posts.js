@@ -9,9 +9,9 @@ const posts = [
       height: 100
     },
     meta: {
-      author_name: 'Hank',
-      created_at: moment().format('DD.MM.YYYY'),
-      updated_at: moment().format('DD.MM.YYYY'),
+      authorName: 'Hank',
+      createdAt: moment().format('DD.MM.YYYY'),
+      updatedAt: moment().format('DD.MM.YYYY'),
       countOfLikes: 0,
       id: 1
     }
@@ -25,9 +25,9 @@ const posts = [
       height: 100
     },
     meta: {
-      author_name: 'Hank',
-      created_at: moment().format('DD.MM.YYYY'),
-      updated_at: moment().format('DD.MM.YYYY'),
+      authorName: 'Hank',
+      createdAt: moment().format('DD.MM.YYYY'),
+      updatedAt: moment().format('DD.MM.YYYY'),
       countOfLikes: 11,
       id: 2
     }
@@ -41,9 +41,9 @@ const posts = [
       height: 100
     },
     meta: {
-      author_name: 'Hank',
-      created_at: moment().format('DD.MM.YYYY'),
-      updated_at: moment().format('DD.MM.YYYY'),
+      authorName: 'Hank',
+      createdAt: moment().format('DD.MM.YYYY'),
+      updatedAt: moment().format('DD.MM.YYYY'),
       countOfLikes: 12,
       id: 3
     }

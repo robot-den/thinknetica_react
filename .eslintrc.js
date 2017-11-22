@@ -23,6 +23,7 @@ module.exports = {
     "destructuring"
   ],
   "rules": {
+    "no-console":0,
     "indent": [
       "error",
       2,

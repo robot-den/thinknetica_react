@@ -4,47 +4,43 @@ import TextBox from './TextBox';
 import Like from './Like';
 
 
-class PostMetaInfo extends React.Component {
-  render() {
-    const { author_name, created_at, updated_at, countOfLikes, like } = this.props;
-    return(
-      <div className='post_meta_info'>
-        <TextBox>
-          {'Author: '}
-        </TextBox>
-        <TextBox className='author_name'>
-          {author_name}
-        </TextBox>
-        <TextBox>
-          {'created at: '}
-        </TextBox>
-        <TextBox style={{color: 'red', marginRight: '5px'}}>
-        {created_at}
-        </TextBox>
-        <TextBox>
-          {'updated at: '}
-        </TextBox>
-        <TextBox>
-          {updated_at}
-        </TextBox>
-        <Like countOfLikes={countOfLikes} like={like} />
-      </div>
-    )
-  }
-}
+const PostMetaInfo = ({ authorName, createdAt, updatedAt, countOfLikes, like }) => (
+  <div className='post_meta_info'>
+    <TextBox>
+      {'Author: '}
+    </TextBox>
+    <TextBox className='authorName'>
+      {authorName}
+    </TextBox>
+    <TextBox>
+      {'created at: '}
+    </TextBox>
+    <TextBox style={{color: 'red', marginRight: '5px'}}>
+      {createdAt}
+    </TextBox>
+    <TextBox>
+      {'updated at: '}
+    </TextBox>
+    <TextBox>
+      {updatedAt}
+    </TextBox>
+    <Like countOfLikes={countOfLikes} like={like} />
+  </div>
+);
 
 PostMetaInfo.defaultProps = {
-  author_name: 'Default blog item author',
-  created_at: '01.01.1971',
-  updated_at: '01.01.1971',
+  authorName: 'Default blog item author',
+  createdAt: '01.01.1971',
+  updatedAt: '01.01.1971',
   countOfLikes: 0
 };
 
 PostMetaInfo.propTypes = {
-  author_name: PropTypes.string,
-  created_at: PropTypes.string,
-  updated_at: PropTypes.string,
-  countOfLikes: PropTypes.number
+  authorName: PropTypes.string,
+  createdAt: PropTypes.string,
+  updatedAt: PropTypes.string,
+  countOfLikes: PropTypes.number,
+  like: PropTypes.func
 };
 
 export default PostMetaInfo;

@@ -11,7 +11,7 @@ class BlogItem extends React.Component {
 
   render() {
     const { image, description, meta } = this.props;
-    return(
+    return (
       <div>
         <div>
           <Image {...image} />
@@ -34,9 +34,9 @@ BlogItem.defaultProps = {
     height: 100
   },
   meta: {
-    author_name: 'Default blog item author',
-    created_at: '01.01.1970',
-    updated_at: '01.01.1970'
+    authorName: 'Default blog item author',
+    createdAt: '01.01.1970',
+    updatedAt: '01.01.1970'
   }
 };
 

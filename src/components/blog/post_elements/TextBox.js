@@ -4,8 +4,8 @@ import DOM from 'react-dom-factories';
 const TextBox = ({ style, className, children }) => (
   DOM.span(
     {
-      style: style,
-      className: className
+      style,
+      className
     },
     children
   )

@@ -15,16 +15,16 @@ class BlogsContainer extends React.Component {
     const posts = _.cloneDeep(this.state.posts);
     const likedPost = _.find(posts, (post) => (post.meta.id === id));
     likedPost.meta.countOfLikes++;
-    this.setState({posts: posts});
+    this.setState({posts});
   }
 
   render() {
     const { posts } = this.state;
     return (
       React.createElement('div', {},
-        React.createElement(BlogList, { posts: posts, like: this.like }),
-        React.createElement(PieChart, { posts: posts})
-      )
+        React.createElement(BlogList, { posts, like: this.like }),
+        React.createElement(PieChart, { posts })
+      ) 
     );
   }
 }
