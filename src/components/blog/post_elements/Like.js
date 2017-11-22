@@ -1,10 +1,13 @@
+import React from 'react';
 import DOM from 'react-dom-factories';
 import PropTypes from 'prop-types';
+import { Button } from 'semantic-ui-react'
 
 const Like = ({ countOfLikes, like }) => {
   return DOM.div(
     {},
-    DOM.button(
+    React.createElement(
+      Button,
       {onClick: () => like()},
       countOfLikes
     )
