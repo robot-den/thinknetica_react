@@ -1,6 +1,6 @@
 import React from 'react';
 
-import BlogsContainer from 'components/blog/BlogsContainer';
+import BlogsContainer from 'containers/BlogsContainer';
 
 const App = () => (
   <BlogsContainer />

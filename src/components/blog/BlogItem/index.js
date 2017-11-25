@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import PostMetaInfo from './post_elements/PostMetaInfo';
-import TextBox from './post_elements/TextBox';
-import Image from './post_elements/Image';
+import PostMetaInfo from './PostMetaInfo';
+import TextBox from './TextBox';
+import Image from './Image';
 
 class BlogItem extends React.Component {
   shouldComponentUpdate(nextProps) {
