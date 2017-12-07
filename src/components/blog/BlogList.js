@@ -12,16 +12,14 @@ const BlogList = ({ posts, like }) => (
       posts,
       (post) => {
         post.meta.like = () => like(post.meta.id);
-        post.key = post.meta.id;
         return (
-          <div>
+          <div key={post.meta.id}>
             <h3>
               <Link to={postPath(post.meta.id)}>{post.description}</Link>
             </h3>
-            <BlogItem {...post} />
+            <BlogItem post={post} />
           </div>
         );
-        // return React.createElement(BlogItem, {...post, key: post.meta.id});
       }
     )
   )

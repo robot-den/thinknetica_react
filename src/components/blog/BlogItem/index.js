@@ -6,11 +6,11 @@ import Image from './Image';
 
 class BlogItem extends React.Component {
   shouldComponentUpdate(nextProps) {
-    return !(this.props.meta.countOfLikes === nextProps.meta.countOfLikes);
+    return !(this.props.post.meta.countOfLikes === nextProps.post.meta.countOfLikes);
   }
 
   render() {
-    const { image, description, meta } = this.props;
+    const { image, description, meta } = this.props.post;
     return (
       <div>
         <div>
@@ -26,24 +26,24 @@ class BlogItem extends React.Component {
 }
 
 BlogItem.defaultProps = {
-  description: 'default blog item description',
-  image: {
-    src: 'https://test.com/default.png',
-    alt: 'default blog item Opps',
-    width: 100,
-    height: 100
-  },
-  meta: {
-    authorName: 'Default blog item author',
-    createdAt: '01.01.1970',
-    updatedAt: '01.01.1970'
+  post: {
+    description: 'default blog item description',
+    image: {
+      src: 'https://test.com/default.png',
+      alt: 'default blog item Opps',
+      width: 100,
+      height: 100
+    },
+    meta: {
+      authorName: 'Default blog item author',
+      createdAt: '01.01.1970',
+      updatedAt: '01.01.1970'
+    }
   }
 };
 
 BlogItem.propTypes = {
-  description: PropTypes.string,
-  image: PropTypes.shape(Image.propTypes),
-  meta: PropTypes.shape(PostMetaInfo.propTypes)
+  post: PropTypes.object
 };
 
 export default BlogItem;
