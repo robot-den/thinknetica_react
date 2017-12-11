@@ -5,6 +5,7 @@ import App from 'App';
 import { AppContainer } from 'react-hot-loader';
 
 import '../semantic/dist/semantic.min.css';
+import './style.css';
 
 ReactDOM.render(
   <AppContainer>

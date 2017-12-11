@@ -10,9 +10,10 @@ class BlogItem extends React.Component {
   }
 
   render() {
-    const { image, description, meta } = this.props.post;
+    const { withoutTitle, title, image, description, meta } = this.props.post;
     return (
       <div>
+        { withoutTitle || <h3>{title}</h3> }
         <div>
           <Image {...image} />
         </div>

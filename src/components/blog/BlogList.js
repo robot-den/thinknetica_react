@@ -12,10 +12,11 @@ const BlogList = ({ posts, like }) => (
       posts,
       (post) => {
         post.meta.like = () => like(post.meta.id);
+        post.withoutTitle = true;
         return (
           <div key={post.meta.id}>
             <h3>
-              <Link to={postPath(post.meta.id)}>{post.description}</Link>
+              <Link to={postPath(post.meta.id)}>{post.title}</Link>
             </h3>
             <BlogItem post={post} />
           </div>
