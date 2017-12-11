@@ -1,6 +1,6 @@
-import MainLayout from '../components/layouts/MainLayout';
-import BlogsContainer from '../containers/BlogsContainer';
-import Post from '../components/blog/Post';
+import MainLayout from 'components/layouts/MainLayout';
+import BlogsContainer from 'containers/BlogsContainer';
+import Post from 'components/blog/Post';
 import { postPath } from 'helpers/routes';
 
 const Index = {

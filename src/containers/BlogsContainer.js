@@ -18,7 +18,12 @@ class BlogsContainer extends React.Component {
   fetchPosts() {
     request
       .get('http://localhost:3001/')
-      .end((err, res) => this.setState({posts: res.body}));
+      .end(
+        (err, res) => {
+          const posts = (err) ? [] : res.body;
+          this.setState({posts});
+        }
+      );
   }
 
   like(id) {
