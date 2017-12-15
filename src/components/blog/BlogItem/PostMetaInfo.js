@@ -24,7 +24,7 @@ const PostMetaInfo = ({ authorName, createdAt, updatedAt, countOfLikes, like }) 
     <TextBox>
       {updatedAt}
     </TextBox>
-    <Like countOfLikes={countOfLikes} like={like} />
+    { like && <Like countOfLikes={countOfLikes} like={like} /> }
   </div>
 );
 
